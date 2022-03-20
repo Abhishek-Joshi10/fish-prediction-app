@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fish</title>
+</head>
+<body>
+        <h1> Predicting the type of fish, enter dimensions and check which fish you have</h1>
+
+        <form action="{{ url_for('predict') }}" method=”post”>
+            <input type="text" name="Weight" placeholder="Weight of the fish" required="required" />
+            <input type="text" name="Length1" placeholder="Length 1 of the fish" required="required" />
+            <input type="text" name="Length2" placeholder="Length 2 of the fish " required="required" />
+            <input type="text" name="Length3" placeholder="Length 3 of the fish " required="required" />
+            <input type="text" name="Height" placeholder="Height of the fish " required="required" />
+            <input type="text" name="Width" placeholder="Width of the fish " required="required" />
+            <input type="submit" value="Predict"/>
+
+        {{ prediction_text }}
+        </form>
+
+</body>
+</html>

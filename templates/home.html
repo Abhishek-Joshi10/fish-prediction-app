@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="POST">
+            <h1>Predicting the type of fish, enter dimensions and check which fish you have</h1>
+            <h2>Enter your info!!!!</h2>
+              <input type="text" name="Weight" placeholder="Weight" required/>
+              <input type="text" name="Length1" placeholder="Length1" required/>
+              <input type="text" name="Length2" placeholder="Length2" required/>
+              <input type="text" name="Length3" placeholder="Length3" required/>
+              <input type="text" name="Height" placeholder="Height" required/>
+              <input type="text" name="Width" placeholder="Width" required/>
+              <p><input type="submit" value="Predict"/></p>
+              <p> {{prediction_text}}</p>
+    </form>
+
+</body>
+</html>
